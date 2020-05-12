@@ -1,5 +1,5 @@
 name: check_vpn_connection
-description: A new Flutter package.
+description: A simple and lightweight Flutter package that lets you define VPN connection status on your devices.
 version: 0.0.1
 
 environment:
