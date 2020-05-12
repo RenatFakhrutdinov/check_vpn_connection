@@ -1,5 +1,8 @@
 # check_vpn_connection
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Pub](https://img.shields.io/pub/v/check_vpn_connection)](https://pub.dev/packages/check_vpn_connection)
+
 A simple and lightweight Flutter package that lets you define VPN connection status on your devices.
 
 > Note that this plugin is in the early stages of development and has been poorly tested. You can use the plugin at your own risk.
