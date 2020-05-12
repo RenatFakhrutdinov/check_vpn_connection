@@ -1,14 +1,32 @@
-# checkvpnconnection
+# check_vpn_connection
 
-A new Flutter package.
+A simple and lightweight Flutter package that lets you define VPN connection status on your devices.
 
-## Getting Started
+> Note that this plugin is in the early stages of development and has been poorly tested. You can use the plugin at your own risk.
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## How to use
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+You can get a VPN connection status, which is either `true` (vpn connected) or `false` (no vpn connection)
+
+```
+
+if (await CheckVpnConnection.isVpnActive()) {
+  //do some action if VPN connection status is true
+}
+
+```
+Also see our [Example](https://github.com/RenatFakhrutdinov/check_vpn_connection/tree/master/example).
+
+## Issues
+
+Please file any issues, bugs or feature request as an issue on our [GitHub](https://github.com/RenatFakhrutdinov/check_vpn_connection/issues) page.
+
+## Want to contribute
+
+To contribute, follow the following easy steps
+##### Step 1
+- Fork this repo!
+##### Step 2
+- Make your own updates
+##### Step 3
+- Create a new pull request
