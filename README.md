@@ -5,7 +5,7 @@
 
 A simple and lightweight Flutter package that lets you define VPN connection status on your devices.
 
-> Note that this plugin is in the early stages of development and has been poorly tested. You can use the plugin at your own risk.
+> Note this plugin is in the early stages of development and has been poorly tested. You can use the plugin at your own risk.
 
 ## How to use
 
@@ -14,7 +14,7 @@ You can get a VPN connection status, which is either `true` (vpn connected) or `
 ```
 
 if (await CheckVpnConnection.isVpnActive()) {
-  //do some action if VPN connection status is true
+  // do some action if VPN connection status is true
 }
 
 ```
