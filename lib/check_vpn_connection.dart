@@ -4,18 +4,25 @@ import 'dart:io';
 
 ///A class that contains static method of checking VPN connection
 class CheckVpnConnection {
-
   ///Returns true if device has VPN connection
-  static Future<bool> isVpnActive() async {
-    bool isVpnActive;
-    List<NetworkInterface> interfaces = await NetworkInterface.list(
-        includeLoopback: false, type: InternetAddressType.any);
-    interfaces.isNotEmpty
-        ? isVpnActive = interfaces.any((interface) =>
-            interface.name.contains("tun") ||
-            interface.name.contains("ppp") ||
-            interface.name.contains("pptp"))
-        : isVpnActive = false;
-    return isVpnActive;
+  Future<bool> isVpnActive() async {
+    try {
+      final interfaces = await NetworkInterface.list(
+        includeLoopback: false,
+        type: InternetAddressType.any,
+      );
+      return interfaces.any((interface) => [
+            "tun",
+            "tap",
+            "ppp",
+            "pptp",
+            "l2tp",
+            "ipsec",
+            "vpn"
+          ].any((pattern) => interface.name.toLowerCase().contains(pattern)));
+    } catch (e) {
+      // Handle exceptions, e.g., if the network interface list cannot be retrieved
+      rethrow;
+    }
   }
 }
